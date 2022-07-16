@@ -63,7 +63,6 @@ section {
 
 img {
   width: 100%;
-  max-width: 100%;
 }
 a {
   color: var(--dark-clr);
@@ -95,14 +94,6 @@ header {
 }
 /*header */
 
-/*header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-}*/
 .nav {
   height: 7.2rem;
   display: flex;
@@ -200,13 +191,13 @@ header {
 .headline {
   font-family: var(--font-family);
   text-transform: uppercase;
-  font-size: 7rem;
-  color: var(--dark-clr);
+  font-size: 4rem;
+  color: var(--dark-clrt-clr);
   letter-spacing: 2px;
 }
 .sub-headline span {
   color: var(--dark-clr);
-  font-size: 2.7rem;
+  font-size: 1.4rem;
   font-family: var(--font-family);
   text-transform: uppercase;
   font-weight: 900;
@@ -629,17 +620,61 @@ span {
     height: initial;
     background-color: transparent;
     padding: 0;
-    justify-content: center;
+    justify-content: initial;
     flex-direction: row;
+    transform: initial;
     transition: initial;
-    transition: initial;
-    margin-right: 24rem;
   }
   .nav-item {
-    margin: 0 2.4rem;
+    margin: 0 1.4rem;
     border: none;
   }
   .nav-item :last-child {
     margin-right: 0;
+  }
+  .nav-link {
+    font-size: 1.3rem;
+  }
+  .active {
+    position: relative;
+  }
+  .active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -3px;
+  }
+  .sub-headline {
+    font-size: 10rem;
+  }
+  .first-letter {
+    font-size: 4.7rem;
+    letter-spacing: 0.8rem;
+  }
+  .line {
+    max-width: 11.4rem;
+  }
+  .discount {
+    font-size: 3.4rem;
+  }
+  .description p {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .headline-daark {
+    margin-bottom: 1rem;
+  }
+  .about-text {
+    margin-right: 10rem;
+  }
+  .about-img {
+    display: grid;
+    grid-column: 1 span 3;
+    margin-left: 15rem;
+    gap: 2rem;
   }
 }
